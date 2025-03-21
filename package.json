@@ -17,6 +17,7 @@
     "vite-plugin-handlebars": "^1.6.0"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "legendary-cursor": "^1.0.2"
   }
 }
