@@ -5,7 +5,7 @@ class SketchGallery {
 
         var activePage = 0;
 
-        let CELLS_PER_PAGE = 27;
+        let CELLS_PER_PAGE = 9;
         if(innerWidth < 1800) {
             CELLS_PER_PAGE = 7*4;
         }
