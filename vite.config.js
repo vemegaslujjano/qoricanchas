@@ -4,7 +4,7 @@ import handlebars from 'vite-plugin-handlebars';
 export default {
   base: '/qoricanchas/',
   build: {
-    outDir: 'build', // La carpeta de salida es "build"
+    outDir: 'docs', // La carpeta de salida es "build"
   },
   plugins: [
     handlebars({
