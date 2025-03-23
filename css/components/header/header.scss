@@ -9,10 +9,10 @@
     position: relative;
     margin: auto;
 
-    padding: 3rem 2rem 0 2rem;
+    padding: 1rem 2rem 0 2rem; /* Reducir el padding superior */
 
     @media all and (min-width: $large-screen-breakpoint) {
-        padding: 5rem 2rem 1rem 2rem;
+        padding: 2rem 2rem 1rem 2rem; /* Reducir el padding superior */
     }    
 
     display: flex;
@@ -26,21 +26,27 @@
     z-index: 1;
 
     svg.DBlogo {
-
-        @media all and (min-width: 0px) {
-            width:  100px;
-            height: 100px;
-        }
-        @media all and (min-width: 1000px) {
-            width:  120px;
+        /* Tamaño base para móviles */
+        width: 100vw; /* 20% del ancho de la ventana */
+        height: auto; /* Mantiene la proporción */
+        position: relative; /* Permite mover el logo */
+        top: 0px; /* Mueve el logo 80px hacia arriba */
+    }
+    
+    @media all and (min-width: 1000px) {
+        svg.DBlogo {
+            width: 120px; /* Tamaño fijo para pantallas medianas */
             height: 120px;
-        }
-        @media all and (min-width: $large-screen-breakpoint) {
-            width:  160px;
-            height: 160px;
+            top: 0; /* Restablece la posición en pantallas grandes */
         }
     }
-
+    
+    @media all and (min-width: $large-screen-breakpoint) {
+        svg.DBlogo {
+            width: 280px; /* Tamaño fijo para pantallas grandes */
+            height: 280px;
+        }
+    }
     .header_controlbox {
         display: flex;
         flex-flow: row nowrap;
@@ -175,7 +181,7 @@ h1.portfolio_text, h1.sketches_text {
 
 
 hr.header_separator {
-    margin: 4rem auto -4.5rem auto;
+    margin: 2rem auto -2.5rem auto; /* Reducir el margen superior */
     width: 75%;
     height: 1px;
 
@@ -189,7 +195,7 @@ hr.header_separator {
 
     @media all and (min-width: $large-screen-breakpoint) {
         width: 52%;
-        margin: 4.9rem auto -5.8rem auto;
+        margin: 3rem auto -4rem auto; /* Reducir el margen superior */
         height: 2px;
     }
 
